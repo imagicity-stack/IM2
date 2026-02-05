@@ -1,0 +1,157 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "Imagicity Creative Agency",
+      "archetype": "Swiss & High-Contrast (Creative Variant)",
+      "vibe": "Professional, Crisp, Trustworthy, Modern",
+      "theme_mode": "light"
+    },
+    "typography": {
+      "font_family": {
+        "heading": ["Manrope", "sans-serif"],
+        "body": ["DM Sans", "sans-serif"],
+        "mono": ["JetBrains Mono", "monospace"]
+      },
+      "scale": {
+        "h1": "text-4xl md:text-5xl font-bold tracking-tight leading-tight",
+        "h2": "text-3xl font-bold tracking-tight",
+        "h3": "text-2xl font-semibold tracking-tight",
+        "body_lg": "text-lg leading-relaxed",
+        "body_base": "text-base leading-relaxed text-gray-600",
+        "caption": "text-sm font-medium text-gray-500 uppercase tracking-wider"
+      },
+      "rules": "Headings must use Manrope. Body text must use DM Sans. All financial data (amounts, GSTIN, Invoice #) must use JetBrains Mono."
+    },
+    "colors": {
+      "palette": {
+        "background": {
+          "default": "#FFFFFF",
+          "subtle": "#F8F9FA",
+          "sidebar": "#FFFFFF"
+        },
+        "foreground": {
+          "default": "#0A0A0A",
+          "muted": "#525252",
+          "inverse": "#FFFFFF"
+        },
+        "primary": {
+          "default": "#2563EB",
+          "hover": "#1D4ED8",
+          "foreground": "#FFFFFF"
+        },
+        "secondary": {
+          "default": "#F3F4F6",
+          "foreground": "#1F2937"
+        },
+        "accent": {
+          "default": "#F97316",
+          "foreground": "#FFFFFF"
+        },
+        "border": {
+          "default": "#E5E7EB",
+          "active": "#2563EB"
+        },
+        "status": {
+          "success_bg": "#DCFCE7",
+          "success_text": "#166534",
+          "warning_bg": "#FEF9C3",
+          "warning_text": "#854D0E",
+          "error_bg": "#FEE2E2",
+          "error_text": "#991B1B"
+        }
+      },
+      "gradients": "No gradients for backgrounds. Use solid colors. Subtle gradients allowed only on primary buttons or active states (e.g., 'bg-gradient-to-r from-blue-600 to-blue-700')."
+    },
+    "layout": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "spacing": {
+        "section": "py-12 md:py-16",
+        "component": "p-6 md:p-8",
+        "gap": "gap-6 md:gap-8"
+      },
+      "grid_strategy": "Bento Grid Mode B (High Density). Use 'grid-cols-1 md:grid-cols-3 lg:grid-cols-4' for dashboards. Ensure full height utilization.",
+      "radius": "rounded-md"
+    },
+    "components": {
+      "buttons": "Sharp or slightly rounded (rounded-md). High contrast. Primary: Blue bg, White text. Secondary: Gray bg, Dark text.",
+      "cards": "Flat white background, 1px border (#E5E7EB), no shadow by default. Hover: border-blue-500/50 transition-colors.",
+      "inputs": "Background #F9FAFB (gray-50), Border #E5E7EB. Focus: Ring-2 Ring-Blue-100 Border-Blue-500.",
+      "tables": "Clean rows, no vertical borders. Header: uppercase, text-xs, text-gray-500, bg-gray-50. Rows: hover:bg-gray-50 transition-colors.",
+      "sidebar": "Fixed left sidebar. White background, right border. Active item: bg-blue-50 text-blue-700 border-r-2 border-blue-700."
+    },
+    "visual_enhancers": {
+      "shadows": "Minimalist. 'shadow-sm' for dropdowns/modals. Avoid heavy drop shadows.",
+      "textures": "Subtle noise overlay (opacity 0.02) allowed on login/marketing pages to kill digital flatness.",
+      "animations": "Micro-interactions only. Button hover: scale-105. Page transition: fade-in (opacity 0 to 1 in 0.2s)."
+    }
+  },
+  "assets": {
+    "images": {
+      "login_background": {
+        "url": "https://images.unsplash.com/photo-1764437358331-d481ce4bdfa9?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Abstract Geometric White Pattern",
+        "usage": "Full screen background for Login/Signup pages with overlay"
+      },
+      "dashboard_welcome": {
+        "url": "https://images.unsplash.com/photo-1766375887695-bef1c2b0b954?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Creative Office Space",
+        "usage": "Welcome widget or empty state illustration"
+      },
+      "avatars": [
+        "https://images.unsplash.com/photo-1589220286904-3dcef62c68ee?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.unsplash.com/photo-1575299833801-85ce40813bac?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg"
+      ],
+      "client_logos": [
+        "https://images.pexels.com/photos/15863044/pexels-photo-15863044.jpeg",
+        "https://images.pexels.com/photos/9949426/pexels-photo-9949426.jpeg",
+        "https://images.unsplash.com/photo-1655210912605-dce274855925?crop=entropy&cs=srgb&fm=jpg&q=85"
+      ]
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px (thin and elegant). Size 20px for standard UI, 16px for dense data."
+    }
+  },
+  "implementation_instructions": {
+    "tailwind_config": {
+      "fontFamily": {
+        "heading": ["Manrope", "sans-serif"],
+        "body": ["DM Sans", "sans-serif"],
+        "mono": ["JetBrains Mono", "monospace"]
+      },
+      "colors": {
+        "primary": "#2563EB",
+        "secondary": "#F3F4F6",
+        "accent": "#F97316",
+        "background": "#FFFFFF",
+        "foreground": "#0A0A0A"
+      }
+    },
+    "global_css": {
+      "root_vars": {
+        "--background": "0 0% 100%",
+        "--foreground": "0 0% 3.9%",
+        "--primary": "221 83% 53%",
+        "--primary-foreground": "0 0% 98%",
+        "--border": "220 13% 91%"
+      },
+      "overrides": ".App { text-align: left; background-color: #FFFFFF; } body { background-color: #FFFFFF; color: #0A0A0A; }"
+    },
+    "component_overrides": {
+      "Button": "default: h-10 px-4 py-2 rounded-md font-medium transition-all active:scale-95",
+      "Card": "rounded-md border bg-card text-card-foreground shadow-none",
+      "Input": "h-10 rounded-md border border-input bg-gray-50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    }
+  },
+  "universal_guidelines": [
+    "DO NOT use gradients for backgrounds. Keep it clean white.",
+    "DO NOT use 'Inter' font. Use 'DM Sans' for body and 'Manrope' for headings.",
+    "Ensure all financial data is monospaced (JetBrains Mono).",
+    "Use 'data-testid' on all interactive elements.",
+    "Use 'sonner' for toasts.",
+    "Use 'lucide-react' for icons.",
+    "Maintain high contrast (WCAG AA) for all text.",
+    "Dashboard grid must be dense but readable (Bento Mode B)."
+  ]
+}

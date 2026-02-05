@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.3/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <h1>PDF Test</h1>
+    <button onclick="generatePDF()">Generate Test PDF</button>
+    <div id="status"></div>
+    
+    <script>
+        function generatePDF() {
+            const status = document.getElementById('status');
+            try {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                
+                doc.text('Test PDF', 20, 20);
+                
+                doc.autoTable({
+                    head: [['Name', 'Price']],
+                    body: [['Test Service', '₹1000']],
+                });
+                
+                doc.save('test.pdf');
+                status.innerHTML = '<p style="color: green;">PDF generated successfully!</p>';
+            } catch (error) {
+                status.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>
